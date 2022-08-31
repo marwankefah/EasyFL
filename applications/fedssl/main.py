@@ -146,7 +146,7 @@ def run():
                 "rank": args.gpu-1,
                 "local_rank": args.gpu-1,
                 "world_size": args.gpu,
-                "init_method": "tcp://localhost:23456",
+                "init_method": "file:///home/interns/marawan/distributed_test",
                 "backend": 'nccl'
 
             },
