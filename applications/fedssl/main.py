@@ -141,7 +141,7 @@ def run():
         rank, local_rank, world_size, host_addr = slurm.setup()
 
         distribute_config = {
-            "gpu": None,
+            "gpu": args.gpu,
             "distributed": {
                 "rank": None,
                 "local_rank": None,

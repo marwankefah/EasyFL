@@ -26,7 +26,7 @@ You can conduct training using different FedSSL methods and our proposed FedEMA 
 Run FedEMA with auto scaler $\tau=0.7$
 ```shell
 python applications/fedssl/main.py --task_id fedema --model byol \
-      --aggregate_encoder online --update_encoder dynamic_ema_online --update_predictor dynamic_dapu \
+      --aggregate_encoder online --update_encoder dynamic_ema_online --update_predictor dynamic_dapu --gpu=2 \
       --auto_scaler y --auto_scaler_target 0.7 2>&1 | tee log/${task_id}.log
 ```
 
