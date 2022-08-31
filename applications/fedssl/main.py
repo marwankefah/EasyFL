@@ -139,13 +139,14 @@ def run():
 
     if args.gpu > 1:
         rank, local_rank, world_size, host_addr = slurm.setup()
+
         distribute_config = {
-            "gpu": world_size,
+            "gpu": None,
             "distributed": {
-                "rank": rank,
-                "local_rank": local_rank,
-                "world_size": world_size,
-                "init_method": host_addr
+                "rank": None,
+                "local_rank": None,
+                "world_size": None,
+                "init_method": None
             },
         }
         config.update(distribute_config)
