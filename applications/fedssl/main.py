@@ -146,7 +146,9 @@ def run():
                 "rank": None,
                 "local_rank": args.gpu-1,
                 "world_size": args.gpu,
-                "init_method": None
+                "init_method": args.gpu-1,
+                "backend": 'nccl'
+
             },
         }
         config.update(distribute_config)
