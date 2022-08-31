@@ -146,7 +146,7 @@ def run():
                 "rank": None,
                 "local_rank": args.gpu-1,
                 "world_size": args.gpu,
-                "init_method": args.gpu-1,
+                "init_method": "file:///distributed_test",
                 "backend": 'nccl'
 
             },
