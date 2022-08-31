@@ -228,7 +228,9 @@ def dist_init(backend, init_method, world_size, rank, local_rank):
         int: Rank of current process.
         int: Total number of processes.
     """
-    dist.init_process_group(backend, init_method=init_method, rank=rank, world_size=world_size)
+    # dist.init_process_group(backend, init_method=init_method, rank=rank, world_size=world_size)
+    dist.init_process_group('nccl')
+
     assert dist.is_initialized()
     return rank, world_size
 
