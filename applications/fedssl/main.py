@@ -144,7 +144,7 @@ def run():
             "gpu": args.gpu,
             "distributed": {
                 "rank": None,
-                "local_rank": None,
+                "local_rank": args.gpu,
                 "world_size": args.gpu,
                 "init_method": None
             },
